@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Restaurant } from "@/data/restaurants";
 import RestaurantMenu from "@/components/RestaurantMenu";
 import ReservationModal from "@/components/ReservationModal";
+import ReviewsCarousel from "@/components/ReviewsCarousel";
 
 interface RestaurantContentProps {
   restaurant: Restaurant;
@@ -15,7 +16,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-[70vh] md:h-[80vh] flex items-end">
+      <section className="relative h-screen flex items-end">
         <div className="absolute inset-0">
           <Image
             src={restaurant.image}
@@ -25,14 +26,14 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-24 text-white"
+          className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 md:pb-32 text-white w-full"
         >
           <p className="font-lato text-accent text-sm md:text-base uppercase tracking-widest mb-4">
             {restaurant.subtitle}
@@ -139,30 +140,68 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
                 Galerie Photo
               </h2>
               <p className="font-lato text-lg text-primary/70 max-w-2xl mx-auto">
-                Découvrez l'ambiance unique de notre établissement
+                Découvrez l&apos;ambiance unique de notre établissement
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {restaurant.gallery.map((image, index) => (
-                <motion.div
-                  key={image}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative aspect-[4/3] rounded-2xl overflow-hidden group cursor-pointer"
-                >
-                  <Image
-                    src={image}
-                    alt={`${restaurant.name} - Photo ${index + 1}`}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </motion.div>
-              ))}
+            {/* Horizontal Scrolling Gallery */}
+            <div className="relative">
+              {/* Previous Button - Desktop only */}
+              <button
+                onClick={() => {
+                  const container = document.getElementById('gallery-scroll');
+                  if (container) {
+                    container.scrollBy({ left: -400, behavior: 'smooth' });
+                  }
+                }}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-300 hover:scale-110 hidden lg:flex items-center justify-center"
+                aria-label="Photo précédente"
+              >
+                <ChevronLeft className="w-6 h-6 text-primary" />
+              </button>
+
+              {/* Next Button - Desktop only */}
+              <button
+                onClick={() => {
+                  const container = document.getElementById('gallery-scroll');
+                  if (container) {
+                    container.scrollBy({ left: 400, behavior: 'smooth' });
+                  }
+                }}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-300 hover:scale-110 hidden lg:flex items-center justify-center"
+                aria-label="Photo suivante"
+              >
+                <ChevronRight className="w-6 h-6 text-primary" />
+              </button>
+
+              <div id="gallery-scroll" className="flex gap-4 md:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+                {restaurant.gallery.map((image, index) => (
+                  <motion.div
+                    key={image}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    className="relative flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden group cursor-pointer snap-center"
+                  >
+                    <Image
+                      src={image}
+                      alt={`${restaurant.name} - Photo ${index + 1}`}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 640px) 85vw, (max-width: 768px) 70vw, (max-width: 1024px) 45vw, 30vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </motion.div>
+                ))}
+              </div>
+              
+              {/* Scroll Indicator */}
+              <div className="text-center mt-4">
+                <p className="text-sm text-primary/50 font-lato">
+                  ← Faites défiler pour voir plus →
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -190,6 +229,7 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
                 restaurantName={restaurant.name}
                 phone={restaurant.booking.phone}
                 email={restaurant.booking.email}
+                slug={restaurant.slug}
               />
               <a
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.address)}`}
@@ -205,15 +245,8 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-primary text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="font-playfair text-2xl font-bold mb-4">Groupe Grand Café de France</p>
-          <p className="font-lato text-white/70">
-            © {new Date().getFullYear()} Tous droits réservés
-          </p>
-        </div>
-      </footer>
+      {/* Reviews Section */}
+      <ReviewsCarousel />
     </main>
   );
 }

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { RESTAURANTS } from "@/data/restaurants";
@@ -15,6 +15,19 @@ export default function Navbar() {
   if (pathname === "/") {
     return null;
   }
+
+  // Déterminer le restaurant actuel basé sur l'URL
+  const currentRestaurant = RESTAURANTS.find((r) => 
+    pathname.includes(`/restaurants/${r.slug}`)
+  );
+
+  // Fonction pour obtenir le label de localisation
+  const getLocationLabel = (slug: string) => {
+    if (slug === "grand-cafe-zone-pietonne") return "Rue Piétonne";
+    if (slug === "grand-cafe-jean-medecin") return "Jean-Médecin";
+    if (slug === "rina-bar") return "Rue Piétonne";
+    return null;
+  };
 
   return (
     <motion.nav
@@ -33,27 +46,37 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {RESTAURANTS.map((restaurant) => (
-              <Link
-                key={restaurant.slug}
-                href={`/restaurants/${restaurant.slug}`}
-                className={`font-lato text-sm font-medium transition-colors duration-300 ${
-                  pathname === `/restaurants/${restaurant.slug}`
-                    ? "text-accent"
-                    : "text-primary hover:text-accent"
-                }`}
-              >
-                {restaurant.name}
-              </Link>
-            ))}
+            {RESTAURANTS.map((restaurant) => {
+              const locationLabel = getLocationLabel(restaurant.slug);
+              const isActive = pathname.includes(`/restaurants/${restaurant.slug}`);
+              return (
+                <Link
+                  key={restaurant.slug}
+                  href={`/restaurants/${restaurant.slug}`}
+                  className={`font-lato text-sm font-medium transition-all duration-300 flex flex-col items-center px-3 py-2 rounded-lg ${
+                    isActive
+                      ? "text-accent bg-primary/5"
+                      : "text-primary hover:text-accent hover:bg-primary/5"
+                  }`}
+                >
+                  <span>{restaurant.name}</span>
+                  {locationLabel && (
+                    <span className="text-xs text-primary/60 font-normal">
+                      {locationLabel}
+                    </span>
+                  )}
+                </Link>
+              );
+            })}
             
-            <a
-              href="tel:+33493887788"
-              className="flex items-center gap-2 px-6 py-3 bg-accent text-white font-lato text-sm font-semibold rounded-full hover:bg-accent/90 transition-all duration-300 hover:scale-105"
-            >
-              <Phone size={16} />
-              Réserver
-            </a>
+            {currentRestaurant && (
+              <Link
+                href={`/restaurants/${currentRestaurant.slug}/reservation`}
+                className="px-6 py-3 bg-accent text-white font-lato text-sm font-semibold rounded-full hover:bg-accent/90 transition-all duration-300 hover:scale-105"
+              >
+                Réserver
+              </Link>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -77,28 +100,41 @@ export default function Navbar() {
             className="md:hidden bg-background border-t border-primary/10"
           >
             <div className="px-4 py-6 space-y-4">
-              {RESTAURANTS.map((restaurant) => (
-                <Link
-                  key={restaurant.slug}
-                  href={`/restaurants/${restaurant.slug}`}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block py-2 font-lato text-base font-medium transition-colors ${
-                    pathname === `/restaurants/${restaurant.slug}`
-                      ? "text-accent"
-                      : "text-primary hover:text-accent"
-                  }`}
-                >
-                  {restaurant.name}
-                </Link>
-              ))}
+              {RESTAURANTS.map((restaurant) => {
+                const locationLabel = getLocationLabel(restaurant.slug);
+                const isActive = pathname.includes(`/restaurants/${restaurant.slug}`);
+                return (
+                  <Link
+                    key={restaurant.slug}
+                    href={`/restaurants/${restaurant.slug}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block py-2 px-3 rounded-lg font-lato text-base font-medium transition-all ${
+                      isActive
+                        ? "text-accent bg-primary/5"
+                        : "text-primary hover:text-accent hover:bg-primary/5"
+                    }`}
+                  >
+                    <div className="flex flex-col">
+                      <span>{restaurant.name}</span>
+                      {locationLabel && (
+                        <span className="text-xs text-primary/60 font-normal">
+                          {locationLabel}
+                        </span>
+                      )}
+                    </div>
+                  </Link>
+                );
+              })}
               
-              <a
-                href="tel:+33493887788"
-                className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-accent text-white font-lato text-sm font-semibold rounded-full hover:bg-accent/90 transition-all"
-              >
-                <Phone size={16} />
-                Réserver
-              </a>
+              {currentRestaurant && (
+                <Link
+                  href={`/restaurants/${currentRestaurant.slug}/reservation`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-accent text-white font-lato text-sm font-semibold rounded-full hover:bg-accent/90 transition-all"
+                >
+                  Réserver
+                </Link>
+              )}
             </div>
           </motion.div>
         )}

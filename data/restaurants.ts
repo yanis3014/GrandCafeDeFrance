@@ -29,7 +29,8 @@ export const RESTAURANTS: Restaurant[] = [
     slug: "grand-cafe-zone-pietonne",
     name: "Le Grand Café de France",
     subtitle: "Zone Piétonne",
-    description: "L'institution Niçoise depuis 1975. Une brasserie traditionnelle de prestige au cœur de la zone piétonne.",
+    description:
+      "L'institution Niçoise depuis 1975. Une brasserie traditionnelle de prestige au cœur de la zone piétonne.",
     image: "/grand-cafe-de-France-pietonne/hero/hero2.jpg",
     address: "7 Rue de France, 06000 Nice",
     phone: "04 93 53 97 38",
@@ -45,38 +46,82 @@ export const RESTAURANTS: Restaurant[] = [
       "/grand-cafe-de-France-pietonne/bar/bar-2.jpg",
       "/grand-cafe-de-France-pietonne/restaurant/terasse-de-nuit.webp",
       "/grand-cafe-de-France-pietonne/restaurant/terasse.webp",
-      "/grand-cafe-de-France-pietonne/restaurant/terasse2.webp"
+      "/grand-cafe-de-France-pietonne/restaurant/terasse2.webp",
     ],
     historyImages: [
       "/grand-cafe-de-France-pietonne/histoire/histoire.webp",
-      "/grand-cafe-de-France-pietonne/histoire/our-team.jpg"
+      "/grand-cafe-de-France-pietonne/histoire/our-team.jpg",
     ],
     booking: {
       phone: "0493539738",
-      email: "reservation@grandcafe-nice.com"
+      email: "reservation@grandcafe-nice.com",
     },
     menu: [
       {
         category: "Traditions Françaises",
         items: [
-          { name: "Soupe à l'Oignon Gratinée", description: "French onion soup gratinée", price: "19.00€" },
-          { name: "Soupe de Poissons", description: "Rouille & croûtons", price: "19.00€" },
-          { name: "Assiette de Fromages", description: "Comté, Tome grise, Chèvre, Camembert", price: "19.50€" },
-          { name: "Cuisses de Grenouilles", description: "Au beurre persillé (7 pcs)", price: "21.00€" },
-          { name: "Escargots de Bourgogne", description: "Au beurre persillé (12 pcs)", price: "19.00€" },
-          { name: "Foie Gras Mi-Cuit", description: "Au Cognac, pain mendiant", price: "22.00€" }
-        ]
+          {
+            name: "Soupe à l'Oignon Gratinée",
+            description: "French onion soup gratinée",
+            price: "19.00€",
+          },
+          {
+            name: "Soupe de Poissons",
+            description: "Rouille & croûtons",
+            price: "19.00€",
+          },
+          {
+            name: "Assiette de Fromages",
+            description: "Comté, Tome grise, Chèvre, Camembert",
+            price: "19.50€",
+          },
+          {
+            name: "Cuisses de Grenouilles",
+            description: "Au beurre persillé (7 pcs)",
+            price: "21.00€",
+          },
+          {
+            name: "Escargots de Bourgogne",
+            description: "Au beurre persillé (12 pcs)",
+            price: "19.00€",
+          },
+          {
+            name: "Foie Gras Mi-Cuit",
+            description: "Au Cognac, pain mendiant",
+            price: "22.00€",
+          },
+        ],
       },
       {
         category: "Hors d'Oeuvres",
         items: [
-          { name: "Oeufs Mimosa", description: "Copeaux de truffe", price: "13.00€" },
-          { name: "Camembert Rôti", description: "Roasted Camembert Cheese", price: "18.00€" },
-          { name: "Bouquet de Crevettes", description: "6 pièces, sauce cocktail", price: "27.00€" },
-          { name: "6 Huîtres Fines de Claire N°2", description: "Sauce mignonnette", price: "26.00€" },
-          { name: "Fritto Misto di Mare", description: "Portofino style", price: "21.00€" },
-          { name: "Fish & Chips (Entrée)", price: "21.00€" }
-        ]
+          {
+            name: "Oeufs Mimosa",
+            description: "Copeaux de truffe",
+            price: "13.00€",
+          },
+          {
+            name: "Camembert Rôti",
+            description: "Roasted Camembert Cheese",
+            price: "18.00€",
+          },
+          {
+            name: "Bouquet de Crevettes",
+            description: "6 pièces, sauce cocktail",
+            price: "27.00€",
+          },
+          {
+            name: "6 Huîtres Fines de Claire N°2",
+            description: "Sauce mignonnette",
+            price: "26.00€",
+          },
+          {
+            name: "Fritto Misto di Mare",
+            description: "Portofino style",
+            price: "21.00€",
+          },
+          { name: "Fish & Chips (Entrée)", price: "21.00€" },
+        ],
       },
       {
         category: "Hummus Bar",
@@ -86,123 +131,270 @@ export const RESTAURANTS: Restaurant[] = [
           { name: "Hummus Boeuf", price: "11.50€" },
           { name: "Hummus Tomates Séchées", price: "11.50€" },
           { name: "Hummus Poulet", price: "11.50€" },
-          { name: "Hummus Légumes", price: "11.50€" }
-        ]
+          { name: "Hummus Légumes", price: "11.50€" },
+        ],
       },
       {
         category: "Salades",
         items: [
-          { name: "Salade Verte", description: "Green mix salad", price: "9.00€" },
-          { name: "Salade Cesar", description: "Poulet ou Crevettes", price: "19.50€" },
-          { name: "Salade Caprese", description: "Tomates, Mozzarella, Basilic", price: "19.50€" },
-          { name: "Salade Niçoise", description: "Ventrèche de thon", price: "19.50€" }
-        ]
+          {
+            name: "Salade Verte",
+            description: "Green mix salad",
+            price: "9.00€",
+          },
+          {
+            name: "Salade Cesar",
+            description: "Poulet ou Crevettes",
+            price: "19.50€",
+          },
+          {
+            name: "Salade Caprese",
+            description: "Tomates, Mozzarella, Basilic",
+            price: "19.50€",
+          },
+          {
+            name: "Salade Niçoise",
+            description: "Ventrèche de thon",
+            price: "19.50€",
+          },
+        ],
       },
       {
         category: "Pizza Lovers",
         items: [
-          { name: "Focaccia Fantastica", description: "Bread, sea salt, olive oil, rosemary", price: "9.00€" },
-          { name: "Margherita", description: "Tomato sauce, cheese, basil", price: "13.00€" },
+          {
+            name: "Focaccia Fantastica",
+            description: "Bread, sea salt, olive oil, rosemary",
+            price: "9.00€",
+          },
+          {
+            name: "Margherita",
+            description: "Tomato sauce, cheese, basil",
+            price: "13.00€",
+          },
           { name: "Regina", description: "Ham, mushrooms", price: "18.00€" },
-          { name: "Napolitana", description: "Anchovies, olives, capers", price: "15.00€" },
+          {
+            name: "Napolitana",
+            description: "Anchovies, olives, capers",
+            price: "15.00€",
+          },
           { name: "Pepperoni", description: "Spicy sausage", price: "18.00€" },
-          { name: "Aubergine", description: "Eggplant, garlic, parsley", price: "18.00€" },
+          {
+            name: "Aubergine",
+            description: "Eggplant, garlic, parsley",
+            price: "18.00€",
+          },
           { name: "Parma", description: "Parma ham, arugula", price: "18.00€" },
           { name: "Neptune", description: "Tuna, onion", price: "18.00€" },
           { name: "4 Fromages", description: "4 Cheeses", price: "18.00€" },
-          { name: "Meat Lovers", description: "Minced beef, egg, onion", price: "18.00€" },
+          {
+            name: "Meat Lovers",
+            description: "Minced beef, egg, onion",
+            price: "18.00€",
+          },
           { name: "Saumon", description: "Cream, salmon", price: "18.00€" },
-          { name: "Tartufo", description: "Truffle cream, tuber aestivum", price: "29.00€" }
-        ]
+          {
+            name: "Tartufo",
+            description: "Truffle cream, tuber aestivum",
+            price: "29.00€",
+          },
+        ],
       },
       {
         category: "Pâtes & Risotto",
         items: [
           { name: "Rigatoni Arrabiata", price: "16.00€" },
-          { name: "Rigatoni Alla Norma", description: "Aubergines, tomates, basilic", price: "17.50€" },
+          {
+            name: "Rigatoni Alla Norma",
+            description: "Aubergines, tomates, basilic",
+            price: "17.50€",
+          },
           { name: "Linguini Bolognaise", price: "19.50€" },
           { name: "Linguini Carbonara", price: "19.50€" },
           { name: "Mac & Cheese", price: "22.00€" },
           { name: "Ravioli à la Truffe", price: "24.00€" },
-          { name: "Linguini aux Vongoles", description: "Clams", price: "28.00€" },
-          { name: "Risotto Asperges & Gambas", price: "28.00€" }
-        ]
+          {
+            name: "Linguini aux Vongoles",
+            description: "Clams",
+            price: "28.00€",
+          },
+          { name: "Risotto Asperges & Gambas", price: "28.00€" },
+        ],
       },
       {
         category: "The Fish Boy (Poissons)",
         items: [
-          { name: "Tartare Saumon Avocat", description: "Pesto, pignons, tomates séchées", price: "23.00€" },
-          { name: "Filet de Branzino", description: "Méditerranéo, olives, tomates cerises", price: "31.00€" },
-          { name: "Saumon Rôti", description: "Riz et sauce vierge", price: "24.00€" },
-          { name: "Fish & Chips (Plat)", description: "Le classique", price: "21.00€" },
-          { name: "Paëlla aux Fruits de Mer", description: "Pour 2 personnes", price: "32.00€" },
+          {
+            name: "Tartare Saumon Avocat",
+            description: "Pesto, pignons, tomates séchées",
+            price: "23.00€",
+          },
+          {
+            name: "Filet de Branzino",
+            description: "Méditerranéo, olives, tomates cerises",
+            price: "31.00€",
+          },
+          {
+            name: "Saumon Rôti",
+            description: "Riz et sauce vierge",
+            price: "24.00€",
+          },
+          {
+            name: "Fish & Chips (Plat)",
+            description: "Le classique",
+            price: "21.00€",
+          },
+          {
+            name: "Paëlla aux Fruits de Mer",
+            description: "Pour 2 personnes",
+            price: "32.00€",
+          },
           { name: "Linguine Fruits de Mer", price: "32.00€" },
-          { name: "Moules Frites", description: "Poulette, Marinière, Provençale ou Curry", price: "19.50€" }
-        ]
+          {
+            name: "Moules Frites",
+            description: "Poulette, Marinière, Provençale ou Curry",
+            price: "19.50€",
+          },
+        ],
       },
       {
         category: "Viandes",
         items: [
           { name: "Hamburger Frites", price: "21.50€" },
-          { name: "Steak Tartare", description: "Pommes frites", price: "22.00€" },
-          { name: "Tagliata de Boeuf", description: "Parmesan, roquette", price: "24.00€" },
-          { name: "Paillard de Poulet", description: "Salade, pommes de terre", price: "21.00€" },
-          { name: "Magret de Canard", description: "Sauce miel, pommes parisiennes", price: "20.00€" },
-          { name: "Steak Faux-Filet", description: "Sauce béarnaise", price: "29.00€" },
-          { name: "Filet de Boeuf", description: "Purée, sauce poivre", price: "44.00€" }
-        ]
+          {
+            name: "Steak Tartare",
+            description: "Pommes frites",
+            price: "22.00€",
+          },
+          {
+            name: "Tagliata de Boeuf",
+            description: "Parmesan, roquette",
+            price: "24.00€",
+          },
+          {
+            name: "Paillard de Poulet",
+            description: "Salade, pommes de terre",
+            price: "21.00€",
+          },
+          {
+            name: "Magret de Canard",
+            description: "Sauce miel, pommes parisiennes",
+            price: "20.00€",
+          },
+          {
+            name: "Steak Faux-Filet",
+            description: "Sauce béarnaise",
+            price: "29.00€",
+          },
+          {
+            name: "Filet de Boeuf",
+            description: "Purée, sauce poivre",
+            price: "44.00€",
+          },
+        ],
       },
       {
         category: "Huîtres & Coquillages",
         items: [
-          { name: "Huîtres Pléiade Poget N°5", description: "Par 6", price: "22.00€" },
-          { name: "Huîtres Pléiade Poget N°3", description: "Par 6", price: "24.00€" },
-          { name: "Huîtres Pléiade Poget N°2", description: "Par 6", price: "26.00€" },
-          { name: "Huîtres Pléiade Poget N°1", description: "Par 6", price: "29.00€" },
-          { name: "Huîtres Gillardeau N°3", description: "Par 6", price: "35.00€" },
-          { name: "Huîtres Gillardeau N°2", description: "Par 6", price: "39.00€" },
+          {
+            name: "Huîtres Pléiade Poget N°5",
+            description: "Par 6",
+            price: "22.00€",
+          },
+          {
+            name: "Huîtres Pléiade Poget N°3",
+            description: "Par 6",
+            price: "24.00€",
+          },
+          {
+            name: "Huîtres Pléiade Poget N°2",
+            description: "Par 6",
+            price: "26.00€",
+          },
+          {
+            name: "Huîtres Pléiade Poget N°1",
+            description: "Par 6",
+            price: "29.00€",
+          },
+          {
+            name: "Huîtres Gillardeau N°3",
+            description: "Par 6",
+            price: "35.00€",
+          },
+          {
+            name: "Huîtres Gillardeau N°2",
+            description: "Par 6",
+            price: "39.00€",
+          },
           { name: "Bulots Cuits", description: "300g", price: "18.00€" },
           { name: "Crevettes", description: "Par 6", price: "27.00€" },
           { name: "Langoustine Pochée", description: "Pièce", price: "7.50€" },
           { name: "Tourteau Mayonnaise", description: "400g", price: "31.00€" },
-          { name: "Homard Entier Froid", description: "600/800g", price: "66.00€" },
-          { name: "Demi Homard Grillé", price: "39.50€" }
-        ]
+          {
+            name: "Homard Entier Froid",
+            description: "600/800g",
+            price: "66.00€",
+          },
+          { name: "Demi Homard Grillé", price: "39.50€" },
+        ],
       },
       {
         category: "Plateaux de Fruits de Mer",
         items: [
-          { name: "Plateau de l'Écailler", description: "3 Fine de Claire N°3, bulots, 3 crevettes", price: "32.00€" },
-          { name: "Plateau Dégustation", description: "4 Gillardeau, 4 Poget N°2, 4 Fine de Claire N°3", price: "52.00€" },
-          { name: "Plateau Crustacés", description: "12 crevettes, 4 langoustines, 1 demi homard, 1 tourteau", price: "129.00€" },
-          { name: "Plateau Royal", description: "Gillardeau, huîtres, bulots, crevettes, langoustines, homard, tourteau", price: "220.00€" },
-          { name: "Plateau Grand Café de France", description: "Le sommet : Homard, Langouste, Caviar, Vodka...", price: "790.00€" }
-        ]
+          {
+            name: "Plateau de l'Écailler",
+            description: "3 Fine de Claire N°3, bulots, 3 crevettes",
+            price: "32.00€",
+          },
+          {
+            name: "Plateau Dégustation",
+            description: "4 Gillardeau, 4 Poget N°2, 4 Fine de Claire N°3",
+            price: "52.00€",
+          },
+          {
+            name: "Plateau Crustacés",
+            description:
+              "12 crevettes, 4 langoustines, 1 demi homard, 1 tourteau",
+            price: "129.00€",
+          },
+          {
+            name: "Plateau Royal",
+            description:
+              "Gillardeau, huîtres, bulots, crevettes, langoustines, homard, tourteau",
+            price: "220.00€",
+          },
+          {
+            name: "Plateau Grand Café de France",
+            description: "Le sommet : Homard, Langouste, Caviar, Vodka...",
+            price: "790.00€",
+          },
+        ],
       },
       {
         category: "Caviars",
         items: [
           { name: "Osciètre 30g", price: "130.00€" },
           { name: "Osciètre 50g", price: "240.00€" },
-          { name: "Beluga 50g", price: "690.00€" }
-        ]
+          { name: "Beluga 50g", price: "690.00€" },
+        ],
       },
       {
         category: "Desserts",
         items: [
           { name: "Crème brûlée", price: "9.00€" },
           { name: "Mousse au Chocolat", price: "9.00€" },
-          { name: "Tiramisu", price: "9.00€" }
-        ]
-      }
-    ]
+          { name: "Tiramisu", price: "9.00€" },
+        ],
+      },
+    ],
   },
   {
     slug: "rina-bar",
     name: "Le Petit Café de France",
     subtitle: "Rina's Bar",
-    description: "Une atmosphère plus intimiste et chaleureuse. Le lieu idéal pour vos cafés matinaux ou vos cocktails en soirée",
-    image: "/grand-cafe-de-France-pietonne/hero/hero.jpg",
+    description:
+      "Une atmosphère plus intimiste et chaleureuse. Le lieu idéal pour vos cafés matinaux ou vos cocktails en soirée",
+    image: "/grand-cafe-de-France-pietonne/bar/bar.jpg",
     address: "7 Rue de France, 06000 Nice",
     phone: "04 92 00 33 00",
     gallery: [
@@ -217,60 +409,157 @@ export const RESTAURANTS: Restaurant[] = [
       "/grand-cafe-de-France-pietonne/Terasse/notre-terrasse-ouverte.jpg",
       "/grand-cafe-de-France-pietonne/restaurant/terasse-de-nuit.webp",
       "/grand-cafe-de-France-pietonne/restaurant/terasse.webp",
-      "/grand-cafe-de-France-pietonne/restaurant/terasse2.webp"
+      "/grand-cafe-de-France-pietonne/restaurant/terasse2.webp",
     ],
     historyImages: [
       "/grand-cafe-de-France-pietonne/histoire/histoire.webp",
-      "/grand-cafe-de-France-pietonne/histoire/our-team.jpg"
+      "/grand-cafe-de-France-pietonne/histoire/our-team.jpg",
     ],
     booking: {
       phone: "0600000000",
-      email: "reservation@rina-bar.com"
+      email: "reservation@rina-bar.com",
     },
     menu: [
       {
         category: "Les Incontournables",
         items: [
-          { name: "Moules-Frites", description: "Au choix : Poulette, Marinière, Provençale ou Curry", price: "17.50€" },
-          { name: "Paëlla aux Fruits de Mer", description: "Prix par personne", price: "31.00€" }
-        ]
+          {
+            name: "Moules-Frites",
+            description: "Au choix : Poulette, Marinière, Provençale ou Curry",
+            price: "17.50€",
+          },
+          {
+            name: "Paëlla aux Fruits de Mer",
+            description: "Prix par personne",
+            price: "31.00€",
+          },
+        ],
       },
       {
         category: "Pizzas",
         items: [
-          { name: "Marguerite", description: "Tomate, fromage, origan, olives", price: "13.00€" },
-          { name: "Napolitaine", description: "Tomate, fromage, anchois, olives, origan, câpres", price: "14.50€" },
-          { name: "Regina", description: "Tomate, fromage, jambon, champignons, origan", price: "15.00€" },
-          { name: "Aubergine", description: "Fromage, tomate, aubergine, ail, persil, origan", price: "15.50€" },
-          { name: "Neptune", description: "Tomate, thon, fromage, origan, oignon", price: "15.50€" },
-          { name: "Quatre Fromages", description: "Tomate, assortiment de fromages, origan", price: "15.50€" },
-          { name: "Parma", description: "Tomates, fromage, jambon de Parme, roquette", price: "16.00€" },
-          { name: "Pepperoni", description: "Tomate, fromage, saucisse pimentée, origan", price: "16.50€" },
-          { name: "Norvégienne", description: "Tomate cerise, saumon, crème, origan", price: "18.50€" },
-          { name: "Pizza à la Truffe", description: "Truffle pizza", price: "29.00€" }
-        ]
+          {
+            name: "Marguerite",
+            description: "Tomate, fromage, origan, olives",
+            price: "13.00€",
+          },
+          {
+            name: "Napolitaine",
+            description: "Tomate, fromage, anchois, olives, origan, câpres",
+            price: "14.50€",
+          },
+          {
+            name: "Regina",
+            description: "Tomate, fromage, jambon, champignons, origan",
+            price: "15.00€",
+          },
+          {
+            name: "Aubergine",
+            description: "Fromage, tomate, aubergine, ail, persil, origan",
+            price: "15.50€",
+          },
+          {
+            name: "Neptune",
+            description: "Tomate, thon, fromage, origan, oignon",
+            price: "15.50€",
+          },
+          {
+            name: "Quatre Fromages",
+            description: "Tomate, assortiment de fromages, origan",
+            price: "15.50€",
+          },
+          {
+            name: "Parma",
+            description: "Tomates, fromage, jambon de Parme, roquette",
+            price: "16.00€",
+          },
+          {
+            name: "Pepperoni",
+            description: "Tomate, fromage, saucisse pimentée, origan",
+            price: "16.50€",
+          },
+          {
+            name: "Norvégienne",
+            description: "Tomate cerise, saumon, crème, origan",
+            price: "18.50€",
+          },
+          {
+            name: "Pizza à la Truffe",
+            description: "Truffle pizza",
+            price: "29.00€",
+          },
+        ],
       },
       {
         category: "Appetizers / Entrées",
         items: [
-          { name: "Soupe à l'oignon gratinée", description: "French Onion Soup Gratinée", price: "16.00€" },
-          { name: "Camembert Rôti", description: "À l'huile de truffe 'tuber aestivum'", price: "18.50€" },
-          { name: "Escargots de Bourgogne", description: "Beurre persillé (Garlic butter)", price: "17.50€" },
-          { name: "Cuisses de Grenouilles", description: "7 pièces (Frog Legs)", price: "21.50€" },
-          { name: "Foie Gras", description: "Duck Liver Pâté", price: "21.00€" },
-          { name: "Cocktail de Crevettes", description: "6 pièces", price: "27.00€" },
-          { name: "Huîtres Gillardeau n°2", description: "6 pièces", price: "39.00€" }
-        ]
+          {
+            name: "Soupe à l'oignon gratinée",
+            description: "French Onion Soup Gratinée",
+            price: "16.00€",
+          },
+          {
+            name: "Camembert Rôti",
+            description: "À l'huile de truffe 'tuber aestivum'",
+            price: "18.50€",
+          },
+          {
+            name: "Escargots de Bourgogne",
+            description: "Beurre persillé (Garlic butter)",
+            price: "17.50€",
+          },
+          {
+            name: "Cuisses de Grenouilles",
+            description: "7 pièces (Frog Legs)",
+            price: "21.50€",
+          },
+          {
+            name: "Foie Gras",
+            description: "Duck Liver Pâté",
+            price: "21.00€",
+          },
+          {
+            name: "Cocktail de Crevettes",
+            description: "6 pièces",
+            price: "27.00€",
+          },
+          {
+            name: "Huîtres Gillardeau n°2",
+            description: "6 pièces",
+            price: "39.00€",
+          },
+        ],
       },
       {
         category: "Salades",
         items: [
-          { name: "Salade Verte", description: "Huile d'olive et basilic", price: "11.00€" },
-          { name: "Salade César", description: "Poulet, salade romaine, anchois", price: "17.50€" },
-          { name: "Salade Niçoise", description: "Thon, tomate, oeuf, cébette, févettes, anchois, olives, basilic, radis", price: "17.50€" },
-          { name: "Salade Burrata", description: "Mozzarella Burrata, tomate, huile d'olive, basilic", price: "17.50€" },
-          { name: "Salade d'Artichauts", description: "À l'Italienne", price: "19.50€" }
-        ]
+          {
+            name: "Salade Verte",
+            description: "Huile d'olive et basilic",
+            price: "11.00€",
+          },
+          {
+            name: "Salade César",
+            description: "Poulet, salade romaine, anchois",
+            price: "17.50€",
+          },
+          {
+            name: "Salade Niçoise",
+            description:
+              "Thon, tomate, oeuf, cébette, févettes, anchois, olives, basilic, radis",
+            price: "17.50€",
+          },
+          {
+            name: "Salade Burrata",
+            description: "Mozzarella Burrata, tomate, huile d'olive, basilic",
+            price: "17.50€",
+          },
+          {
+            name: "Salade d'Artichauts",
+            description: "À l'Italienne",
+            price: "19.50€",
+          },
+        ],
       },
       {
         category: "Pâtes & Risotto",
@@ -278,52 +567,158 @@ export const RESTAURANTS: Restaurant[] = [
           { name: "Penne à l'Arrabiata", price: "15.50€" },
           { name: "Risotto aux Moules", price: "16.50€" },
           { name: "Pâtes à la Bolognaise", price: "17.50€" },
-          { name: "Gnocchi à la Truffe", description: "Crème de truffe, burrata", price: "22.50€" },
-          { name: "Spaghetti Vongoles", description: "Aux palourdes (Clams)", price: "24.50€" },
+          {
+            name: "Gnocchi à la Truffe",
+            description: "Crème de truffe, burrata",
+            price: "22.50€",
+          },
+          {
+            name: "Spaghetti Vongoles",
+            description: "Aux palourdes (Clams)",
+            price: "24.50€",
+          },
           { name: "Risotto aux Gambas", price: "25.50€" },
           { name: "Spaghetti Fruits de Mer", price: "31.00€" },
-          { name: "Spaghetti Homard", description: "Fruits de mer et demi-homard", price: "41.00€" }
-        ]
+          {
+            name: "Spaghetti Homard",
+            description: "Fruits de mer et demi-homard",
+            price: "41.00€",
+          },
+        ],
       },
       {
         category: "Plats / Main Course",
         items: [
-          { name: "Terre et Mer (Surf & Turf)", description: "Filet de boeuf avec gambas, frites", price: "35.50€" },
-          { name: "Tartare de Boeuf", description: "Salade verte et frites", price: "21.00€" },
-          { name: "Rina's Beef Burger", description: "Hamburger, frites et cornichons", price: "21.00€" },
-          { name: "Rina's Chicken Burger", description: "Hamburger poulet, frites et cornichons", price: "21.00€" },
-          { name: "Escalope Milanaise", description: "Volaille, frites, salade", price: "21.50€" },
-          { name: "Faux-filet (NYC Steak)", description: "Sauce au poivre, salade verte et frites", price: "23.50€" },
-          { name: "Coq au Vin", description: "Poulet du Chef, carottes, pomme de terre", price: "29.50€" },
-          { name: "Saumon Rôti", description: "Frites, salade", price: "22.50€" },
-          { name: "Filet de Loup", description: "Sea bass, sauce vierge, légumes", price: "26.50€" }
-        ]
+          {
+            name: "Terre et Mer (Surf & Turf)",
+            description: "Filet de boeuf avec gambas, frites",
+            price: "35.50€",
+          },
+          {
+            name: "Tartare de Boeuf",
+            description: "Salade verte et frites",
+            price: "21.00€",
+          },
+          {
+            name: "Rina's Beef Burger",
+            description: "Hamburger, frites et cornichons",
+            price: "21.00€",
+          },
+          {
+            name: "Rina's Chicken Burger",
+            description: "Hamburger poulet, frites et cornichons",
+            price: "21.00€",
+          },
+          {
+            name: "Escalope Milanaise",
+            description: "Volaille, frites, salade",
+            price: "21.50€",
+          },
+          {
+            name: "Faux-filet (NYC Steak)",
+            description: "Sauce au poivre, salade verte et frites",
+            price: "23.50€",
+          },
+          {
+            name: "Coq au Vin",
+            description: "Poulet du Chef, carottes, pomme de terre",
+            price: "29.50€",
+          },
+          {
+            name: "Saumon Rôti",
+            description: "Frites, salade",
+            price: "22.50€",
+          },
+          {
+            name: "Filet de Loup",
+            description: "Sea bass, sauce vierge, légumes",
+            price: "26.50€",
+          },
+        ],
       },
       {
         category: "Huîtres & Coquillages",
         items: [
-          { name: "Huîtres Pléiade Poget N°5", description: "Par 6 (Papillon)", price: "22.00€" },
-          { name: "Huîtres Pléiade Poget N°3", description: "Par 6 (Fine de Claire)", price: "24.00€" },
-          { name: "Huîtres Pléiade Poget N°2", description: "Par 6 (Fine de Claire)", price: "26.00€" },
-          { name: "Huîtres Pléiade Poget N°1", description: "Par 6 (Fine de Claire)", price: "29.00€" },
+          {
+            name: "Huîtres Pléiade Poget N°5",
+            description: "Par 6 (Papillon)",
+            price: "22.00€",
+          },
+          {
+            name: "Huîtres Pléiade Poget N°3",
+            description: "Par 6 (Fine de Claire)",
+            price: "24.00€",
+          },
+          {
+            name: "Huîtres Pléiade Poget N°2",
+            description: "Par 6 (Fine de Claire)",
+            price: "26.00€",
+          },
+          {
+            name: "Huîtres Pléiade Poget N°1",
+            description: "Par 6 (Fine de Claire)",
+            price: "29.00€",
+          },
           { name: "Gillardeau N°3", description: "Par 6", price: "35.00€" },
           { name: "Gillardeau N°2", description: "Par 6", price: "39.00€" },
-          { name: "Bulots Cuits", description: "300g env. (Whelks)", price: "18.00€" },
-          { name: "Langoustine Pochée", description: "La pièce", price: "7.50€" },
-          { name: "Tourteau Mayonnaise", description: "La pièce (400g env.)", price: "31.00€" },
-          { name: "Homard Entier Froid", description: "600g/800g", price: "66.00€" },
-          { name: "Demi Homard Grillé", description: "Frites salade ou pâtes pink sauce", price: "39.50€" }
-        ]
+          {
+            name: "Bulots Cuits",
+            description: "300g env. (Whelks)",
+            price: "18.00€",
+          },
+          {
+            name: "Langoustine Pochée",
+            description: "La pièce",
+            price: "7.50€",
+          },
+          {
+            name: "Tourteau Mayonnaise",
+            description: "La pièce (400g env.)",
+            price: "31.00€",
+          },
+          {
+            name: "Homard Entier Froid",
+            description: "600g/800g",
+            price: "66.00€",
+          },
+          {
+            name: "Demi Homard Grillé",
+            description: "Frites salade ou pâtes pink sauce",
+            price: "39.50€",
+          },
+        ],
       },
       {
         category: "Plateaux de Fruits de Mer",
         items: [
-          { name: "Plateau de l'Écailler", description: "3 Fine de Claire n°3, bulots, 3 crevettes", price: "34.00€" },
-          { name: "Plateau Dégustation", description: "4 Gillardeau, 4 Poget n°2, 4 Fine de Claire n°3", price: "54.00€" },
-          { name: "Plateau Grand Café de France", description: "4 huîtres n°5, n°3, n°2, n°1, bulots, 12 crevettes, 12 langoustines", price: "188.00€" },
-          { name: "Plateau Crustacés", description: "12 crevettes, 12 langoustines, 1 homard entier", price: "196.00€" },
-          { name: "Plateau Royal", description: "Gillardeau, huîtres, bulots, crevettes, langoustines, homard, tourteau", price: "229.00€" }
-        ]
+          {
+            name: "Plateau de l'Écailler",
+            description: "3 Fine de Claire n°3, bulots, 3 crevettes",
+            price: "34.00€",
+          },
+          {
+            name: "Plateau Dégustation",
+            description: "4 Gillardeau, 4 Poget n°2, 4 Fine de Claire n°3",
+            price: "54.00€",
+          },
+          {
+            name: "Plateau Grand Café de France",
+            description:
+              "4 huîtres n°5, n°3, n°2, n°1, bulots, 12 crevettes, 12 langoustines",
+            price: "188.00€",
+          },
+          {
+            name: "Plateau Crustacés",
+            description: "12 crevettes, 12 langoustines, 1 homard entier",
+            price: "196.00€",
+          },
+          {
+            name: "Plateau Royal",
+            description:
+              "Gillardeau, huîtres, bulots, crevettes, langoustines, homard, tourteau",
+            price: "229.00€",
+          },
+        ],
       },
       {
         category: "Nos Champagnes (Bouteille 75cl)",
@@ -345,59 +740,141 @@ export const RESTAURANTS: Restaurant[] = [
           { name: "Roederer Rosé", price: "190.00€" },
           { name: "Roederer Cristal", price: "695.00€" },
           { name: "Rare Millésime 2008", price: "695.00€" },
-          { name: "Laurent-Perrier Grand Siècle", price: "490.00€" }
-        ]
+          { name: "Laurent-Perrier Grand Siècle", price: "490.00€" },
+        ],
       },
       {
         category: "Vins Blancs",
         items: [
-          { name: "Chardonnay Bourgogne AOP (Olivier de Pardon)", price: "Verre 11€ / Carafe 32€ / Btl 46€" },
-          { name: "Chablis AOP (Maison Ropiteau)", price: "Verre 12.50€ / Carafe 35€ / Btl 50€" },
+          {
+            name: "Chardonnay Bourgogne AOP (Olivier de Pardon)",
+            price: "Verre 11€ / Carafe 32€ / Btl 46€",
+          },
+          {
+            name: "Chablis AOP (Maison Ropiteau)",
+            price: "Verre 12.50€ / Carafe 35€ / Btl 50€",
+          },
           { name: "Pouilly Fuissé AOP (Jaffelin)", price: "Btl 62.00€" },
-          { name: "Vin de France UNO (Cave la Divine)", price: "Verre 7€ / Carafe 16.50€ / Btl 29€" },
-          { name: "Var IGP (Divines Restanques)", price: "Verre 7.50€ / Carafe 18€ / Btl 33€" },
-          { name: "Côtes de Provence AOP (Tasquier)", price: "Verre 8.50€ / Carafe 19€ / Btl 34€" },
-          { name: "Bellet AOP (Domaine de la Source - Nice)", price: "Btl 59.00€" },
-          { name: "Côtes de Provence AOP (Clos Réal)", price: "Verre 11€ / Carafe 25€ / Btl 42€" },
-          { name: "Sancerre AOP (Paul Vattan)", price: "Verre 12.50€ / Carafe 35€ / Btl 50€" },
-          { name: "Pouilly Fumé AOP (Domaine de Maltaverne)", price: "Btl 51.00€" },
-          { name: "Gewurztraminer AOP (Ruhlmann Vieilles Vignes)", price: "Verre 11.50€ / Carafe 31€ / Btl 44€" },
-          { name: "Pinot Grigio (Italie - Corte Martina)", price: "Verre 10.50€ / Carafe 30€ / Btl 41€" },
-          { name: "Prosecco DOC (Villa Miazzi)", price: "Verre 11€ / Btl 59€" }
-        ]
+          {
+            name: "Vin de France UNO (Cave la Divine)",
+            price: "Verre 7€ / Carafe 16.50€ / Btl 29€",
+          },
+          {
+            name: "Var IGP (Divines Restanques)",
+            price: "Verre 7.50€ / Carafe 18€ / Btl 33€",
+          },
+          {
+            name: "Côtes de Provence AOP (Tasquier)",
+            price: "Verre 8.50€ / Carafe 19€ / Btl 34€",
+          },
+          {
+            name: "Bellet AOP (Domaine de la Source - Nice)",
+            price: "Btl 59.00€",
+          },
+          {
+            name: "Côtes de Provence AOP (Clos Réal)",
+            price: "Verre 11€ / Carafe 25€ / Btl 42€",
+          },
+          {
+            name: "Sancerre AOP (Paul Vattan)",
+            price: "Verre 12.50€ / Carafe 35€ / Btl 50€",
+          },
+          {
+            name: "Pouilly Fumé AOP (Domaine de Maltaverne)",
+            price: "Btl 51.00€",
+          },
+          {
+            name: "Gewurztraminer AOP (Ruhlmann Vieilles Vignes)",
+            price: "Verre 11.50€ / Carafe 31€ / Btl 44€",
+          },
+          {
+            name: "Pinot Grigio (Italie - Corte Martina)",
+            price: "Verre 10.50€ / Carafe 30€ / Btl 41€",
+          },
+          { name: "Prosecco DOC (Villa Miazzi)", price: "Verre 11€ / Btl 59€" },
+        ],
       },
       {
         category: "Vins Rouges",
         items: [
-          { name: "Pinot Noir Grand Cru AOP (Clos de Vougeot)", price: "Btl 395.00€" },
+          {
+            name: "Pinot Noir Grand Cru AOP (Clos de Vougeot)",
+            price: "Btl 395.00€",
+          },
           { name: "Pinot Noir AOP (Gevrey-Chambertin)", price: "Btl 174.00€" },
-          { name: "Var IGP (Divines Restanques)", price: "Verre 7.50€ / Carafe 16.50€ / Btl 29€" },
-          { name: "Côtes de Provence AOP (Tasquier)", price: "Verre 8.50€ / Carafe 19€ / Btl 24€" },
-          { name: "Bellet AOP (Domaine de la Source - Nice)", price: "Btl 69.00€" },
-          { name: "Côtes de Provence AOP (Clos Réal)", price: "Verre 8.50€ / Carafe 19€ / Btl 34€" },
-          { name: "Côtes du Rhône AOP (Vieux Truffiers)", price: "Verre 9€ / Carafe 24€ / Btl 36€" },
-          { name: "Châteauneuf du Pape AOP (Famille Perrin)", price: "Btl 79.00€" },
+          {
+            name: "Var IGP (Divines Restanques)",
+            price: "Verre 7.50€ / Carafe 16.50€ / Btl 29€",
+          },
+          {
+            name: "Côtes de Provence AOP (Tasquier)",
+            price: "Verre 8.50€ / Carafe 19€ / Btl 24€",
+          },
+          {
+            name: "Bellet AOP (Domaine de la Source - Nice)",
+            price: "Btl 69.00€",
+          },
+          {
+            name: "Côtes de Provence AOP (Clos Réal)",
+            price: "Verre 8.50€ / Carafe 19€ / Btl 34€",
+          },
+          {
+            name: "Côtes du Rhône AOP (Vieux Truffiers)",
+            price: "Verre 9€ / Carafe 24€ / Btl 36€",
+          },
+          {
+            name: "Châteauneuf du Pape AOP (Famille Perrin)",
+            price: "Btl 79.00€",
+          },
           { name: "Pétrus Pomerol (Grand Vin 2018)", price: "Btl 14 500.00€" },
-          { name: "Saint Emilion Grand Cru AOP (Château Vieux Guinot)", price: "Verre 12.50€ / Carafe 38€ / Btl 54€" },
-          { name: "Margaux AOP Grand Cru (Château Giscours)", price: "Btl 190.00€" },
+          {
+            name: "Saint Emilion Grand Cru AOP (Château Vieux Guinot)",
+            price: "Verre 12.50€ / Carafe 38€ / Btl 54€",
+          },
+          {
+            name: "Margaux AOP Grand Cru (Château Giscours)",
+            price: "Btl 190.00€",
+          },
           { name: "Château La Fleur-Pétrus 2018", price: "Btl 880.00€" },
           { name: "Château Cheval Blanc 2013", price: "Btl 1 590.00€" },
           { name: "Opus One 2012 (Napa Valley)", price: "Btl 1 900.00€" },
-          { name: "Pinot Noir Pays D'Oc (Jeanjean)", price: "Verre 9€ / Carafe 18€ / Btl 33€" }
-        ]
+          {
+            name: "Pinot Noir Pays D'Oc (Jeanjean)",
+            price: "Verre 9€ / Carafe 18€ / Btl 33€",
+          },
+        ],
       },
       {
         category: "Vins Rosés",
         items: [
-          { name: "Vin de France UNO (Cave la Divine)", price: "Verre 7€ / Carafe 16.50€ / Btl 29€" },
-          { name: "Côtes de Provence AOP (Tasquier)", price: "Verre 8.50€ / Carafe 19€ / Btl 34€" },
-          { name: "Côtes de Provence AOP (Clos Réal)", price: "Verre 11€ / Carafe 25€ / Btl 42€" },
-          { name: "Château Rasque Côtes de Provence AOP", price: "Verre 12.50€ / Carafe 35€ / Btl 50€" },
+          {
+            name: "Vin de France UNO (Cave la Divine)",
+            price: "Verre 7€ / Carafe 16.50€ / Btl 29€",
+          },
+          {
+            name: "Côtes de Provence AOP (Tasquier)",
+            price: "Verre 8.50€ / Carafe 19€ / Btl 34€",
+          },
+          {
+            name: "Côtes de Provence AOP (Clos Réal)",
+            price: "Verre 11€ / Carafe 25€ / Btl 42€",
+          },
+          {
+            name: "Château Rasque Côtes de Provence AOP",
+            price: "Verre 12.50€ / Carafe 35€ / Btl 50€",
+          },
           { name: "Minuty Prestige", price: "Btl 59.00€" },
           { name: "Domaine Ott (Clos Mireille)", price: "Btl 89.00€" },
-          { name: "Whispering Angel", price: "Verre 15€ / Carafe 41€ / Btl 79€" },
-          { name: "The One and Only (Clos de Caille)", description: "Bouteille 1 Litre", price: "79.00€" }
-        ]
+          {
+            name: "Whispering Angel",
+            price: "Verre 15€ / Carafe 41€ / Btl 79€",
+          },
+          {
+            name: "The One and Only (Clos de Caille)",
+            description: "Bouteille 1 Litre",
+            price: "79.00€",
+          },
+        ],
       },
       {
         category: "Desserts & Cocktails",
@@ -405,50 +882,99 @@ export const RESTAURANTS: Restaurant[] = [
           { name: "Crème brûlée", price: "9.00€" },
           { name: "Mousse au Chocolat", price: "9.00€" },
           { name: "Tiramisu", price: "9.00€" },
-          { name: "Cocktails", description: "Aperol Spritz, St Germain Spritz, Mojito", price: "12.00€" }
-        ]
-      }
-    ]
+          {
+            name: "Cocktails",
+            description: "Aperol Spritz, St Germain Spritz, Mojito",
+            price: "12.00€",
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "grand-cafe-jean-medecin",
     name: "Le Grand Café de France",
     subtitle: "Jean-Médecin",
-    description: "L'élégance de la brasserie française sur la célèbre avenue Jean-Médecin. Idéal pour une pause ou un dîner raffiné .",
+    description:
+      "L'élégance de la brasserie française sur la célèbre avenue Jean-Médecin. Idéal pour une pause ou un dîner raffiné .",
     image: "/grand-cafe-de-france-jean-medecin/hero/restaurant-hero.jpg",
     address: "13 Av Jean-Médecin, 06000 Nice",
     phone: "04 93 53 97 38",
     gallery: [
       "/grand-cafe-de-france-jean-medecin/experience/restaurant-presentation.jpg",
       "/grand-cafe-de-france-jean-medecin/terasse/grand-cafe-de-france-nice_1_2000.webp",
-      "/grand-cafe-de-france-jean-medecin/terasse/grand-cafe-de-france-nice-4.jpeg"
+      "/grand-cafe-de-france-jean-medecin/terasse/grand-cafe-de-france-nice-4.jpeg",
     ],
     booking: {
       phone: "0493539738",
-      email: "reservation@grandcafe-nice.com"
+      email: "reservation@grandcafe-nice.com",
     },
     menu: [
       {
         category: "Traditions Françaises",
         items: [
-          { name: "Soupe à l'Oignon Gratinée", description: "French onion soup gratinée", price: "19.00€" },
-          { name: "Soupe de Poissons", description: "Rouille & croûtons", price: "19.00€" },
-          { name: "Assiette de Fromages", description: "Comté, Tome grise, Chèvre, Camembert", price: "19.50€" },
-          { name: "Cuisses de Grenouilles", description: "Au beurre persillé (7 pcs)", price: "21.00€" },
-          { name: "Escargots de Bourgogne", description: "Au beurre persillé (12 pcs)", price: "19.00€" },
-          { name: "Foie Gras Mi-Cuit", description: "Au Cognac, pain mendiant", price: "22.00€" }
-        ]
+          {
+            name: "Soupe à l'Oignon Gratinée",
+            description: "French onion soup gratinée",
+            price: "19.00€",
+          },
+          {
+            name: "Soupe de Poissons",
+            description: "Rouille & croûtons",
+            price: "19.00€",
+          },
+          {
+            name: "Assiette de Fromages",
+            description: "Comté, Tome grise, Chèvre, Camembert",
+            price: "19.50€",
+          },
+          {
+            name: "Cuisses de Grenouilles",
+            description: "Au beurre persillé (7 pcs)",
+            price: "21.00€",
+          },
+          {
+            name: "Escargots de Bourgogne",
+            description: "Au beurre persillé (12 pcs)",
+            price: "19.00€",
+          },
+          {
+            name: "Foie Gras Mi-Cuit",
+            description: "Au Cognac, pain mendiant",
+            price: "22.00€",
+          },
+        ],
       },
       {
         category: "Hors d'Oeuvres",
         items: [
-          { name: "Oeufs Mimosa", description: "Copeaux de truffe", price: "13.00€" },
-          { name: "Camembert Rôti", description: "Roasted Camembert Cheese", price: "18.00€" },
-          { name: "Bouquet de Crevettes", description: "6 pièces, sauce cocktail", price: "27.00€" },
-          { name: "6 Huîtres Fines de Claire N°2", description: "Sauce mignonnette", price: "26.00€" },
-          { name: "Fritto Misto di Mare", description: "Portofino style", price: "21.00€" },
-          { name: "Fish & Chips (Entrée)", price: "21.00€" }
-        ]
+          {
+            name: "Oeufs Mimosa",
+            description: "Copeaux de truffe",
+            price: "13.00€",
+          },
+          {
+            name: "Camembert Rôti",
+            description: "Roasted Camembert Cheese",
+            price: "18.00€",
+          },
+          {
+            name: "Bouquet de Crevettes",
+            description: "6 pièces, sauce cocktail",
+            price: "27.00€",
+          },
+          {
+            name: "6 Huîtres Fines de Claire N°2",
+            description: "Sauce mignonnette",
+            price: "26.00€",
+          },
+          {
+            name: "Fritto Misto di Mare",
+            description: "Portofino style",
+            price: "21.00€",
+          },
+          { name: "Fish & Chips (Entrée)", price: "21.00€" },
+        ],
       },
       {
         category: "Hummus Bar",
@@ -458,115 +984,261 @@ export const RESTAURANTS: Restaurant[] = [
           { name: "Hummus Boeuf", price: "11.50€" },
           { name: "Hummus Tomates Séchées", price: "11.50€" },
           { name: "Hummus Poulet", price: "11.50€" },
-          { name: "Hummus Légumes", price: "11.50€" }
-        ]
+          { name: "Hummus Légumes", price: "11.50€" },
+        ],
       },
       {
         category: "Salades",
         items: [
-          { name: "Salade Verte", description: "Green mix salad", price: "9.00€" },
-          { name: "Salade Cesar", description: "Poulet ou Crevettes", price: "19.50€" },
-          { name: "Salade Caprese", description: "Tomates, Mozzarella, Basilic", price: "19.50€" },
-          { name: "Salade Niçoise", description: "Ventrèche de thon", price: "19.50€" }
-        ]
+          {
+            name: "Salade Verte",
+            description: "Green mix salad",
+            price: "9.00€",
+          },
+          {
+            name: "Salade Cesar",
+            description: "Poulet ou Crevettes",
+            price: "19.50€",
+          },
+          {
+            name: "Salade Caprese",
+            description: "Tomates, Mozzarella, Basilic",
+            price: "19.50€",
+          },
+          {
+            name: "Salade Niçoise",
+            description: "Ventrèche de thon",
+            price: "19.50€",
+          },
+        ],
       },
       {
         category: "Pizza Lovers",
         items: [
-          { name: "Focaccia Fantastica", description: "Bread, sea salt, olive oil, rosemary", price: "9.00€" },
-          { name: "Margherita", description: "Tomato sauce, cheese, basil", price: "13.00€" },
+          {
+            name: "Focaccia Fantastica",
+            description: "Bread, sea salt, olive oil, rosemary",
+            price: "9.00€",
+          },
+          {
+            name: "Margherita",
+            description: "Tomato sauce, cheese, basil",
+            price: "13.00€",
+          },
           { name: "Regina", description: "Ham, mushrooms", price: "18.00€" },
-          { name: "Napolitana", description: "Anchovies, olives, capers", price: "15.00€" },
+          {
+            name: "Napolitana",
+            description: "Anchovies, olives, capers",
+            price: "15.00€",
+          },
           { name: "Pepperoni", description: "Spicy sausage", price: "18.00€" },
-          { name: "Aubergine", description: "Eggplant, garlic, parsley", price: "18.00€" },
+          {
+            name: "Aubergine",
+            description: "Eggplant, garlic, parsley",
+            price: "18.00€",
+          },
           { name: "Parma", description: "Parma ham, arugula", price: "18.00€" },
           { name: "Neptune", description: "Tuna, onion", price: "18.00€" },
           { name: "4 Fromages", description: "4 Cheeses", price: "18.00€" },
-          { name: "Meat Lovers", description: "Minced beef, egg, onion", price: "18.00€" },
+          {
+            name: "Meat Lovers",
+            description: "Minced beef, egg, onion",
+            price: "18.00€",
+          },
           { name: "Saumon", description: "Cream, salmon", price: "18.00€" },
-          { name: "Tartufo", description: "Truffle cream, tuber aestivum", price: "29.00€" }
-        ]
+          {
+            name: "Tartufo",
+            description: "Truffle cream, tuber aestivum",
+            price: "29.00€",
+          },
+        ],
       },
       {
         category: "Pâtes & Risotto",
         items: [
           { name: "Rigatoni Arrabiata", price: "16.00€" },
-          { name: "Rigatoni Alla Norma", description: "Aubergines, tomates, basilic", price: "17.50€" },
+          {
+            name: "Rigatoni Alla Norma",
+            description: "Aubergines, tomates, basilic",
+            price: "17.50€",
+          },
           { name: "Linguini Bolognaise", price: "19.50€" },
           { name: "Linguini Carbonara", price: "19.50€" },
           { name: "Mac & Cheese", price: "22.00€" },
           { name: "Ravioli à la Truffe", price: "24.00€" },
-          { name: "Linguini aux Vongoles", description: "Clams", price: "28.00€" },
-          { name: "Risotto Asperges & Gambas", price: "28.00€" }
-        ]
+          {
+            name: "Linguini aux Vongoles",
+            description: "Clams",
+            price: "28.00€",
+          },
+          { name: "Risotto Asperges & Gambas", price: "28.00€" },
+        ],
       },
       {
         category: "The Fish Boy (Poissons)",
         items: [
-          { name: "Tartare Saumon Avocat", description: "Pesto, pignons, tomates séchées", price: "23.00€" },
-          { name: "Filet de Branzino", description: "Méditerranéo, olives, tomates cerises", price: "31.00€" },
-          { name: "Saumon Rôti", description: "Riz et sauce vierge", price: "24.00€" },
-          { name: "Fish & Chips (Plat)", description: "Le classique", price: "21.00€" },
-          { name: "Paëlla aux Fruits de Mer", description: "Pour 2 personnes", price: "32.00€" },
+          {
+            name: "Tartare Saumon Avocat",
+            description: "Pesto, pignons, tomates séchées",
+            price: "23.00€",
+          },
+          {
+            name: "Filet de Branzino",
+            description: "Méditerranéo, olives, tomates cerises",
+            price: "31.00€",
+          },
+          {
+            name: "Saumon Rôti",
+            description: "Riz et sauce vierge",
+            price: "24.00€",
+          },
+          {
+            name: "Fish & Chips (Plat)",
+            description: "Le classique",
+            price: "21.00€",
+          },
+          {
+            name: "Paëlla aux Fruits de Mer",
+            description: "Pour 2 personnes",
+            price: "32.00€",
+          },
           { name: "Linguine Fruits de Mer", price: "32.00€" },
-          { name: "Moules Frites", description: "Poulette, Marinière, Provençale ou Curry", price: "19.50€" }
-        ]
+          {
+            name: "Moules Frites",
+            description: "Poulette, Marinière, Provençale ou Curry",
+            price: "19.50€",
+          },
+        ],
       },
       {
         category: "Viandes",
         items: [
           { name: "Hamburger Frites", price: "21.50€" },
-          { name: "Steak Tartare", description: "Pommes frites", price: "22.00€" },
-          { name: "Tagliata de Boeuf", description: "Parmesan, roquette", price: "24.00€" },
-          { name: "Paillard de Poulet", description: "Salade, pommes de terre", price: "21.00€" },
-          { name: "Magret de Canard", description: "Sauce miel, pommes parisiennes", price: "20.00€" },
-          { name: "Steak Faux-Filet", description: "Sauce béarnaise", price: "29.00€" },
-          { name: "Filet de Boeuf", description: "Purée, sauce poivre", price: "44.00€" }
-        ]
+          {
+            name: "Steak Tartare",
+            description: "Pommes frites",
+            price: "22.00€",
+          },
+          {
+            name: "Tagliata de Boeuf",
+            description: "Parmesan, roquette",
+            price: "24.00€",
+          },
+          {
+            name: "Paillard de Poulet",
+            description: "Salade, pommes de terre",
+            price: "21.00€",
+          },
+          {
+            name: "Magret de Canard",
+            description: "Sauce miel, pommes parisiennes",
+            price: "20.00€",
+          },
+          {
+            name: "Steak Faux-Filet",
+            description: "Sauce béarnaise",
+            price: "29.00€",
+          },
+          {
+            name: "Filet de Boeuf",
+            description: "Purée, sauce poivre",
+            price: "44.00€",
+          },
+        ],
       },
       {
         category: "Huîtres & Coquillages",
         items: [
-          { name: "Huîtres Pléiade Poget N°5", description: "Par 6", price: "22.00€" },
-          { name: "Huîtres Pléiade Poget N°3", description: "Par 6", price: "24.00€" },
-          { name: "Huîtres Pléiade Poget N°2", description: "Par 6", price: "26.00€" },
-          { name: "Huîtres Pléiade Poget N°1", description: "Par 6", price: "29.00€" },
-          { name: "Huîtres Gillardeau N°3", description: "Par 6", price: "35.00€" },
-          { name: "Huîtres Gillardeau N°2", description: "Par 6", price: "39.00€" },
+          {
+            name: "Huîtres Pléiade Poget N°5",
+            description: "Par 6",
+            price: "22.00€",
+          },
+          {
+            name: "Huîtres Pléiade Poget N°3",
+            description: "Par 6",
+            price: "24.00€",
+          },
+          {
+            name: "Huîtres Pléiade Poget N°2",
+            description: "Par 6",
+            price: "26.00€",
+          },
+          {
+            name: "Huîtres Pléiade Poget N°1",
+            description: "Par 6",
+            price: "29.00€",
+          },
+          {
+            name: "Huîtres Gillardeau N°3",
+            description: "Par 6",
+            price: "35.00€",
+          },
+          {
+            name: "Huîtres Gillardeau N°2",
+            description: "Par 6",
+            price: "39.00€",
+          },
           { name: "Bulots Cuits", description: "300g", price: "18.00€" },
           { name: "Crevettes", description: "Par 6", price: "27.00€" },
           { name: "Langoustine Pochée", description: "Pièce", price: "7.50€" },
           { name: "Tourteau Mayonnaise", description: "400g", price: "31.00€" },
-          { name: "Homard Entier Froid", description: "600/800g", price: "66.00€" },
-          { name: "Demi Homard Grillé", price: "39.50€" }
-        ]
+          {
+            name: "Homard Entier Froid",
+            description: "600/800g",
+            price: "66.00€",
+          },
+          { name: "Demi Homard Grillé", price: "39.50€" },
+        ],
       },
       {
         category: "Plateaux de Fruits de Mer",
         items: [
-          { name: "Plateau de l'Écailler", description: "3 Fine de Claire N°3, bulots, 3 crevettes", price: "32.00€" },
-          { name: "Plateau Dégustation", description: "4 Gillardeau, 4 Poget N°2, 4 Fine de Claire N°3", price: "52.00€" },
-          { name: "Plateau Crustacés", description: "12 crevettes, 4 langoustines, 1 demi homard, 1 tourteau", price: "129.00€" },
-          { name: "Plateau Royal", description: "Gillardeau, huîtres, bulots, crevettes, langoustines, homard, tourteau", price: "220.00€" },
-          { name: "Plateau Grand Café de France", description: "Le sommet : Homard, Langouste, Caviar, Vodka...", price: "790.00€" }
-        ]
+          {
+            name: "Plateau de l'Écailler",
+            description: "3 Fine de Claire N°3, bulots, 3 crevettes",
+            price: "32.00€",
+          },
+          {
+            name: "Plateau Dégustation",
+            description: "4 Gillardeau, 4 Poget N°2, 4 Fine de Claire N°3",
+            price: "52.00€",
+          },
+          {
+            name: "Plateau Crustacés",
+            description:
+              "12 crevettes, 4 langoustines, 1 demi homard, 1 tourteau",
+            price: "129.00€",
+          },
+          {
+            name: "Plateau Royal",
+            description:
+              "Gillardeau, huîtres, bulots, crevettes, langoustines, homard, tourteau",
+            price: "220.00€",
+          },
+          {
+            name: "Plateau Grand Café de France",
+            description: "Le sommet : Homard, Langouste, Caviar, Vodka...",
+            price: "790.00€",
+          },
+        ],
       },
       {
         category: "Caviars",
         items: [
           { name: "Osciètre 30g", price: "130.00€" },
           { name: "Osciètre 50g", price: "240.00€" },
-          { name: "Beluga 50g", price: "690.00€" }
-        ]
+          { name: "Beluga 50g", price: "690.00€" },
+        ],
       },
       {
         category: "Desserts",
         items: [
           { name: "Crème brûlée", price: "9.00€" },
           { name: "Mousse au Chocolat", price: "9.00€" },
-          { name: "Tiramisu", price: "9.00€" }
-        ]
-      }
-    ]
-  }
+          { name: "Tiramisu", price: "9.00€" },
+        ],
+      },
+    ],
+  },
 ];

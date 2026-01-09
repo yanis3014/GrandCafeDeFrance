@@ -19,7 +19,7 @@ export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
         <p className="font-lato text-lg text-primary/60">
           Notre carte sera bientôt disponible.
           <br />
-          Contactez-nous pour plus d'informations.
+          Contactez-nous pour plus d&apos;informations.
         </p>
       </div>
     );
