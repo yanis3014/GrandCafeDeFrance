@@ -72,50 +72,73 @@ export default function ReservationPageContent({ restaurant }: ReservationPageCo
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {/* Restaurant Info Card */}
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 mb-8">
-              <div className="text-center mb-8">
-                <div className="w-24 h-px bg-accent mx-auto mb-6" />
-                <h2 className="font-playfair text-3xl md:text-4xl font-bold text-primary mb-4">
-                  Informations du restaurant
-                </h2>
-                <p className="font-lato text-lg text-primary/70 max-w-2xl mx-auto">
-                  {restaurant.description}
-                </p>
-              </div>
+            {/* Unified Horizontal Card - Luxury Ticket Style */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-white rounded-[20px] shadow-xl overflow-hidden mb-8"
+            >
+              <div className="flex flex-col lg:flex-row">
+                {/* Left Column - Text Content (60%) */}
+                <div className="lg:w-[60%] p-8 md:p-12 order-2 lg:order-1">
+                  <div className="mb-8">
+                    <div className="w-24 h-px bg-accent mb-6" />
+                    <h2 className="font-playfair text-3xl md:text-4xl font-bold text-primary mb-4">
+                      Informations du restaurant
+                    </h2>
+                    <p className="font-lato text-lg text-primary/70 leading-relaxed">
+                      {restaurant.description}
+                    </p>
+                  </div>
 
-              {/* Contact Details */}
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-2xl">
-                  <MapPin className="text-accent mt-1 flex-shrink-0" size={24} />
-                  <div>
-                    <p className="font-lato font-semibold text-primary mb-1">Adresse</p>
-                    <p className="font-lato text-sm text-primary/70">{restaurant.address}</p>
+                  {/* Contact Details */}
+                  <div className="grid md:grid-cols-2 gap-6 mb-8">
+                    <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-2xl">
+                      <MapPin className="text-accent mt-1 flex-shrink-0" size={24} />
+                      <div>
+                        <p className="font-lato font-semibold text-primary mb-1">Adresse</p>
+                        <p className="font-lato text-sm text-primary/70">{restaurant.address}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-2xl">
+                      <Phone className="text-accent mt-1 flex-shrink-0" size={24} />
+                      <div>
+                        <p className="font-lato font-semibold text-primary mb-1">Téléphone</p>
+                        <a
+                          href={`tel:${restaurant.phone}`}
+                          className="font-lato text-sm text-accent hover:underline"
+                        >
+                          {restaurant.phone}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Opening Hours Info */}
+                  <div className="flex items-center justify-center gap-2 p-4 bg-accent/10 rounded-2xl border border-accent/20">
+                    <Clock className="text-accent" size={20} />
+                    <p className="font-lato text-sm text-primary">
+                      Ouvert du lundi au dimanche
+                    </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-2xl">
-                  <Phone className="text-accent mt-1 flex-shrink-0" size={24} />
-                  <div>
-                    <p className="font-lato font-semibold text-primary mb-1">Téléphone</p>
-                    <a
-                      href={`tel:${restaurant.phone}`}
-                      className="font-lato text-sm text-accent hover:underline"
-                    >
-                      {restaurant.phone}
-                    </a>
-                  </div>
+                {/* Right Column - Image (40%) */}
+                <div className="lg:w-[40%] relative min-h-[300px] lg:min-h-[600px] order-1 lg:order-2">
+                  <Image
+                    src="/grand-cafe-de-france-jean-medecin/interieur/interieur .jpeg"
+                    alt={`Intérieur ${restaurant.name}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
+                  {/* Subtle Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:via-transparent lg:to-white/10" />
                 </div>
               </div>
-
-              {/* Opening Hours Info */}
-              <div className="flex items-center justify-center gap-2 p-4 bg-accent/10 rounded-2xl border border-accent/20">
-                <Clock className="text-accent" size={20} />
-                <p className="font-lato text-sm text-primary">
-                  Ouvert du lundi au dimanche
-                </p>
-              </div>
-            </div>
+            </motion.div>
 
             {/* Reservation Methods */}
             <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">

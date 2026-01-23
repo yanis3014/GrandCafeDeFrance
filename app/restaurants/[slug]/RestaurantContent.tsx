@@ -56,33 +56,60 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
         </motion.div>
       </section>
 
-      {/* Description Section */}
+      {/* Description Section - Split Layout with Video */}
       <section className="py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center space-y-8 mb-12"
-          >
-            <div className="w-24 h-px bg-accent mx-auto" />
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary">
-              Notre Histoire
-            </h2>
-            <p className="font-lato text-lg md:text-xl text-primary/80 leading-relaxed max-w-3xl mx-auto">
-              {restaurant.description}
-            </p>
-          </motion.div>
+          {/* Split Layout: Text Left, Video Right */}
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
+            {/* Left Column - Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex-1 space-y-8"
+            >
+              <div className="w-24 h-px bg-accent" />
+              <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-primary">
+                Notre Histoire
+              </h2>
+              <p className="font-lato text-lg md:text-xl text-primary/80 leading-relaxed">
+                {restaurant.description}
+              </p>
+            </motion.div>
 
-          {/* History Images Grid */}
+            {/* Right Column - Vertical Video */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex-1 flex justify-center"
+            >
+              <div className="relative w-full max-w-md">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto max-h-[600px] md:max-h-[75vh] object-cover rounded-2xl shadow-2xl"
+                  style={{ pointerEvents: 'none' }}
+                >
+                  <source src="/grand-cafe-de-france-jean-medecin/video/histoire.mp4" type="video/mp4" />
+                  Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* History Images Grid - Keep below if exists */}
           {restaurant.historyImages && restaurant.historyImages.length > 0 && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="grid md:grid-cols-2 gap-6 mt-12"
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="grid md:grid-cols-2 gap-6 mt-16"
             >
               {restaurant.historyImages.map((image, index) => (
                 <div
@@ -207,39 +234,58 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
         </section>
       )}
 
-      {/* Reservation Section */}
+      {/* Reservation Section - Split Layout */}
       <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-primary text-white rounded-3xl p-12 md:p-16 text-center space-y-8"
+            className="bg-primary rounded-3xl overflow-hidden shadow-2xl"
           >
-            <Clock size={48} className="text-accent mx-auto" />
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold">
-              Réservez Votre Table
-            </h2>
-            <p className="font-lato text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
-              Vivez une expérience gastronomique inoubliable. Notre équipe vous accueille du lundi au dimanche.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <ReservationModal
-                restaurantName={restaurant.name}
-                phone={restaurant.booking.phone}
-                email={restaurant.booking.email}
-                slug={restaurant.slug}
-              />
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.address)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-lato text-base font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
-              >
-                <MapPin size={20} />
-                Voir sur Maps
-              </a>
+            <div className="flex flex-col lg:flex-row lg:items-center">
+              {/* Left Column - Dish Image (40%) */}
+              <div className="lg:w-[40%] relative min-h-[300px] lg:min-h-[600px] order-1">
+                <Image
+                  src="/grand-cafe-de-france-jean-medecin/interieur/interieur4.jpeg"
+                  alt="Plat signature Le Grand Café de France"
+                  fill
+                  className="object-cover w-full"
+                  style={{ objectPosition: 'center center' }}
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+                {/* Subtle Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-primary/30 lg:bg-gradient-to-r lg:from-transparent lg:to-primary/40" />
+              </div>
+
+              {/* Right Column - Reservation Content (60%) */}
+              <div className="lg:w-[60%] p-12 md:p-16 text-center flex flex-col justify-center items-center space-y-8 order-2">
+                <Clock size={48} className="text-accent" />
+                <h2 className="font-playfair text-4xl md:text-5xl font-bold text-white">
+                  Réservez Votre Table
+                </h2>
+                <p className="font-lato text-lg md:text-xl text-white/90 max-w-lg">
+                  Vivez une expérience gastronomique inoubliable. Notre équipe vous accueille du lundi au dimanche.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
+                  <ReservationModal
+                    restaurantName={restaurant.name}
+                    phone={restaurant.booking.phone}
+                    email={restaurant.booking.email}
+                    slug={restaurant.slug}
+                  />
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurant.address)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-lato text-base font-semibold rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20"
+                  >
+                    <MapPin size={20} />
+                    Voir sur Maps
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
