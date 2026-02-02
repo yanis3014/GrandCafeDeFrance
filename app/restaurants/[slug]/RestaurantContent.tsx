@@ -13,13 +13,14 @@ interface RestaurantContentProps {
 }
 
 export default function RestaurantContent({ restaurant }: RestaurantContentProps) {
+
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative h-screen flex items-end">
         <div className="absolute inset-0">
           <Image
-            src={restaurant.image}
+            src={restaurant.imageHero}
             alt={restaurant.name}
             fill
             className="object-cover"
@@ -209,16 +210,15 @@ export default function RestaurantContent({ restaurant }: RestaurantContentProps
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
-                    className="relative flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden group cursor-pointer snap-center"
+                    className="relative flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[45vw] lg:w-[30vw] aspect-[4/3] rounded-2xl overflow-hidden snap-center"
                   >
                     <Image
                       src={image}
                       alt={`${restaurant.name} - Photo ${index + 1}`}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="object-cover"
                       sizes="(max-width: 640px) 85vw, (max-width: 768px) 70vw, (max-width: 1024px) 45vw, 30vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </motion.div>
                 ))}
               </div>

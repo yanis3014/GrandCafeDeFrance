@@ -4,6 +4,7 @@ export interface Restaurant {
   subtitle: string;
   description: string;
   image: string;
+  imageHero: string;
   address: string;
   phone: string;
   menu: MenuItem[];
@@ -32,6 +33,7 @@ export const RESTAURANTS: Restaurant[] = [
     description:
       "L'institution Niçoise depuis 1975. Une brasserie traditionnelle de prestige au cœur de la zone piétonne.",
     image: "/grand-cafe-de-France-pietonne/hero/hero2.jpg",
+    imageHero :"/grand-cafe-de-france-jean-medecin/hero/hero2.jpeg",
     address: "7 Rue de France, 06000 Nice",
     phone: "04 93 53 97 38",
     gallery: [
@@ -395,6 +397,7 @@ export const RESTAURANTS: Restaurant[] = [
     description:
       "Une atmosphère plus intimiste et chaleureuse. Le lieu idéal pour vos cafés matinaux ou vos cocktails en soirée",
     image: "/grand-cafe-de-France-pietonne/bar/bar.jpg",
+    imageHero :"/grand-cafe-de-france-jean-medecin/hero/hero2.jpeg",
     address: "7 Rue de France, 06000 Nice",
     phone: "04 92 00 33 00",
     gallery: [
@@ -898,9 +901,12 @@ export const RESTAURANTS: Restaurant[] = [
     description:
       "L'âme d'une brasserie parisienne, la lumière de la Côte d'Azur. Situé sur la célèbre avenue Jean-Médecin, Le Grand Café de France est le rendez-vous incontournable des amoureux du goût et de l'élégance. Une parenthèse gourmande et raffinée, à toute heure de la journée.",
     image: "/grand-cafe-de-france-jean-medecin/hero/hero.jpeg",
+    imageHero :"/grand-cafe-de-france-jean-medecin/terasse/terasse3.jpeg",
     address: "13 Av Jean-Médecin, 06000 Nice",
     phone: "04 93 53 97 38",
     gallery: [
+      "/grand-cafe-de-france-jean-medecin/hero/hero.jpeg",
+      "/grand-cafe-de-france-jean-medecin/hero/hero2.jpeg",
       "/grand-cafe-de-france-jean-medecin/terasse/terasse1.jpeg",
       "/grand-cafe-de-france-jean-medecin/terasse/terasse2.jpeg",
       "/grand-cafe-de-france-jean-medecin/bar/bar .jpeg",
