@@ -897,7 +897,7 @@ export const RESTAURANTS: Restaurant[] = [
     subtitle: "Jean-Médecin",
     description:
       "L'âme d'une brasserie parisienne, la lumière de la Côte d'Azur. Situé sur la célèbre avenue Jean-Médecin, Le Grand Café de France est le rendez-vous incontournable des amoureux du goût et de l'élégance. Une parenthèse gourmande et raffinée, à toute heure de la journée.",
-    image: "/grand-cafe-de-france-jean-medecin/hero/restaurant-hero.jpg",
+    image: "/grand-cafe-de-france-jean-medecin/hero/hero.jpeg",
     address: "13 Av Jean-Médecin, 06000 Nice",
     phone: "04 93 53 97 38",
     gallery: [
