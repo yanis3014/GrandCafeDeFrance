@@ -1,6 +1,6 @@
 import { RESTAURANTS } from "@/data/restaurants";
 import { notFound } from "next/navigation";
-import DigitalMenu from "@/components/DigitalMenu";
+import MenuClient from "@/components/MenuClient";
 
 export async function generateStaticParams() {
   return RESTAURANTS.map((restaurant) => ({
@@ -8,13 +8,17 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function MenuPage({ params }: { params: { slug: string } }) {
-  const restaurant = RESTAURANTS.find((r) => r.slug === params.slug);
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export default async function MenuPage({ params }: PageProps) {
+  const { slug } = await params;
+  const restaurant = RESTAURANTS.find((r) => r.slug === slug);
 
   if (!restaurant) {
     notFound();
   }
 
-  return <DigitalMenu restaurant={restaurant} />;
+  return <MenuClient restaurant={restaurant} />;
 }
-

@@ -6,11 +6,11 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import type { Restaurant } from "@/data/restaurants";
 
-interface DigitalMenuProps {
+interface MenuClientProps {
   restaurant: Restaurant;
 }
 
-export default function DigitalMenu({ restaurant }: DigitalMenuProps) {
+export default function MenuClient({ restaurant }: MenuClientProps) {
   // Default to first category
   const [activeCategory, setActiveCategory] = useState(restaurant.menu[0].category);
 
@@ -25,7 +25,10 @@ export default function DigitalMenu({ restaurant }: DigitalMenuProps) {
   );
 
   return (
-    <main className="min-h-screen bg-stone-50 text-slate-900 pb-20 selection:bg-amber-600 selection:text-white">
+    <main 
+      className="min-h-screen bg-stone-50 text-slate-900 pb-20 selection:bg-amber-600 selection:text-white"
+      suppressHydrationWarning
+    >
       {/* Header */}
       <header className="pt-12 pb-8 px-4 text-center">
         <h1 className="font-playfair text-3xl md:text-5xl font-bold mb-3 drop-shadow-sm">
