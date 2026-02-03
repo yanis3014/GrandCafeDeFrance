@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         primary: "var(--color-primary)",
         accent: "var(--color-accent)",
+        "accent-menu": "var(--color-accent-menu)",
         background: "var(--color-background)",
       },
       fontFamily: {

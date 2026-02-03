@@ -82,7 +82,7 @@ export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
 
   return (
     <div 
-      className="space-y-12 relative rounded-3xl overflow-hidden p-8 md:p-12"
+      className="space-y-12 relative rounded-3xl overflow-hidden p-4 md:p-8 lg:p-12"
       style={{
         backgroundImage: menuType === 'cuisine' 
           ? `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('${backgroundImage}')`
@@ -194,7 +194,7 @@ export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
               className={`
-                group rounded-2xl p-6 transition-all duration-300
+                group rounded-2xl p-4 md:p-6 transition-all duration-300
                 ${menuType === 'bar' 
                   ? 'bg-white/10 backdrop-blur-sm border border-white/20 hover:border-accent/50'
                   : 'hover:border-accent/30'
@@ -206,18 +206,18 @@ export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
                 boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
               } : {}}
             >
-              <div className="flex justify-between items-start gap-4">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3 md:gap-4">
                 {/* Left: Name & Description */}
-                <div className="flex-1 space-y-2">
+                <div className="flex-1 min-w-0 space-y-2">
                   <h4 className={`
-                    font-playfair text-lg md:text-xl font-bold group-hover:text-accent transition-colors
+                    font-playfair text-lg md:text-xl font-bold group-hover:text-accent transition-colors break-words
                     ${menuType === 'bar' ? 'text-white' : 'text-primary'}
                   `}>
                     {item.name}
                   </h4>
                   {item.description && (
                     <p className={`
-                      font-lato text-sm italic leading-relaxed
+                      font-lato text-sm italic leading-relaxed break-words
                       ${menuType === 'bar' ? 'text-white/80' : 'text-primary/70'}
                     `}>
                       {item.description}
@@ -226,11 +226,11 @@ export default function RestaurantMenu({ menu }: RestaurantMenuProps) {
                 </div>
 
                 {/* Right: Price */}
-                <div className="flex-shrink-0">
+                <div className="md:flex-shrink-0 w-full md:w-auto">
                   <span className={`
-                    font-playfair text-xl md:text-2xl font-bold
+                    font-playfair text-lg md:text-xl lg:text-2xl font-bold block
                     ${menuType === 'bar' ? 'text-accent' : 'text-accent'}
-                  `}>
+                  `} style={{ whiteSpace: 'normal', wordBreak: 'break-word' }}>
                     {item.price}
                   </span>
                 </div>
