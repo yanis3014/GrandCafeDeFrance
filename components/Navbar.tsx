@@ -33,13 +33,13 @@ export default function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/10"
+      className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <h1 className="font-playfair text-2xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
+            <h1 className="font-playfair text-2xl font-bold text-white group-hover:text-accent transition-colors duration-300">
               Café de France
             </h1>
           </Link>
@@ -55,13 +55,13 @@ export default function Navbar() {
                   href={`/restaurants/${restaurant.slug}`}
                   className={`font-lato text-sm font-medium transition-all duration-300 flex flex-col items-center px-3 py-2 rounded-lg ${
                     isActive
-                      ? "text-accent bg-primary/5"
-                      : "text-primary hover:text-accent hover:bg-primary/5"
+                      ? "text-accent bg-white/10"
+                      : "text-white hover:text-accent hover:bg-white/10"
                   }`}
                 >
                   <span>{restaurant.name}</span>
                   {locationLabel && (
-                    <span className="text-xs text-primary/60 font-normal">
+                    <span className="text-xs text-white/70 font-normal">
                       {locationLabel}
                     </span>
                   )}
@@ -82,7 +82,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-primary hover:text-accent transition-colors"
+            className="md:hidden p-2 text-white hover:text-accent transition-colors"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -97,7 +97,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-t border-primary/10"
+            className="md:hidden bg-primary border-t border-white/10"
           >
             <div className="px-4 py-6 space-y-4">
               {RESTAURANTS.map((restaurant) => {
@@ -110,14 +110,14 @@ export default function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block py-2 px-3 rounded-lg font-lato text-base font-medium transition-all ${
                       isActive
-                        ? "text-accent bg-primary/5"
-                        : "text-primary hover:text-accent hover:bg-primary/5"
+                        ? "text-accent bg-white/10"
+                        : "text-white hover:text-accent hover:bg-white/10"
                     }`}
                   >
                     <div className="flex flex-col">
                       <span>{restaurant.name}</span>
                       {locationLabel && (
-                        <span className="text-xs text-primary/60 font-normal">
+                        <span className="text-xs text-white/70 font-normal">
                           {locationLabel}
                         </span>
                       )}
