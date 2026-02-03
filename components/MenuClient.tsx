@@ -26,7 +26,7 @@ export default function MenuClient({ restaurant }: MenuClientProps) {
 
   return (
     <main 
-      className="min-h-screen bg-stone-50 text-slate-900 pb-20 selection:bg-amber-600 selection:text-white"
+      className="min-h-screen bg-background text-primary pb-20 selection:bg-accent selection:text-white"
       suppressHydrationWarning
     >
       {/* Header */}
@@ -34,13 +34,13 @@ export default function MenuClient({ restaurant }: MenuClientProps) {
         <h1 className="font-playfair text-3xl md:text-5xl font-bold mb-3 drop-shadow-sm">
           {restaurant.name}
         </h1>
-        <p className="font-lato text-amber-600 text-xs md:text-sm uppercase tracking-[0.2em] font-medium">
+        <p className="font-lato text-accent text-xs md:text-sm uppercase tracking-[0.2em] font-medium">
           {restaurant.subtitle}
         </p>
       </header>
 
       {/* Sticky Tab Navigation */}
-      <nav className="sticky top-0 z-40 bg-stone-50/95 backdrop-blur-sm border-b border-stone-200/60 shadow-sm transition-all duration-300">
+      <nav className="sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-primary/10 shadow-sm transition-all duration-300">
         <div className="overflow-x-auto scrollbar-hide py-4 px-4 w-full">
           <div className="flex gap-3 whitespace-nowrap min-w-max mx-auto px-2">
             {restaurant.menu.map((category) => {
@@ -51,8 +51,8 @@ export default function MenuClient({ restaurant }: MenuClientProps) {
                   onClick={() => handleCategoryClick(category.category)}
                   className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     isActive
-                      ? "bg-amber-600 text-white shadow-md scale-105"
-                      : "bg-white border border-stone-200 text-slate-500 hover:text-slate-800 hover:border-amber-600/50"
+                      ? "bg-accent text-white shadow-md scale-105"
+                      : "bg-white border border-primary/10 text-primary/60 hover:text-primary hover:border-accent/50"
                   }`}
                 >
                   {category.category}
@@ -77,19 +77,19 @@ export default function MenuClient({ restaurant }: MenuClientProps) {
             {currentCategoryData?.items.map((item, index) => (
               <div 
                 key={`${activeCategory}-${index}`} 
-                className="group flex flex-col gap-1 pb-6 border-b border-stone-200 last:border-none last:pb-0"
+                className="group flex flex-col gap-1 pb-6 border-b border-primary/10 last:border-none last:pb-0"
               >
                 <div className="flex justify-between items-baseline gap-4 w-full">
-                  <h3 className="font-playfair text-xl md:text-2xl font-bold text-slate-900 group-hover:text-amber-700 transition-colors duration-300">
+                  <h3 className="font-playfair text-xl md:text-2xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
                     {item.name}
                   </h3>
-                  <span className="font-lato font-bold text-lg text-amber-600 whitespace-nowrap">
+                  <span className="font-lato font-bold text-lg text-accent whitespace-nowrap">
                     {item.price}
                   </span>
                 </div>
                 
                 {item.description && (
-                  <p className="font-lato text-sm md:text-base text-slate-500 italic leading-relaxed max-w-[90%]">
+                  <p className="font-lato text-sm md:text-base text-primary/60 italic leading-relaxed max-w-[90%]">
                     {item.description}
                   </p>
                 )}
@@ -100,17 +100,10 @@ export default function MenuClient({ restaurant }: MenuClientProps) {
       </div>
 
       {/* Footer */}
-      <footer className="mt-16 py-10 px-4 text-center border-t border-stone-200 bg-stone-100/50">
-        <p className="text-xs text-slate-400 font-lato mb-6 uppercase tracking-wider">
+      <footer className="mt-16 py-10 px-4 text-center border-t border-primary/10 bg-primary/5">
+        <p className="text-xs text-primary/40 font-lato mb-6 uppercase tracking-wider">
           Prix nets, service compris. L&apos;abus d&apos;alcool est dangereux pour la santé.
         </p>
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-stone-300 text-sm text-slate-600 font-semibold hover:bg-white hover:border-amber-600 hover:text-amber-600 transition-all duration-300 shadow-sm bg-white"
-        >
-          <ArrowLeft size={16} />
-          Retour au site web
-        </Link>
       </footer>
     </main>
   );

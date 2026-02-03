@@ -9,9 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#0F1C2E",
-        accent: "#C5A059",
-        background: "#FDFBF7",
+        primary: "var(--color-primary)",
+        accent: "var(--color-accent)",
+        background: "var(--color-background)",
       },
       fontFamily: {
         playfair: ["var(--font-playfair)", "serif"],
